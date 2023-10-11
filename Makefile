@@ -1,32 +1,3 @@
-install:
-	#install commands
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
-
-format:
-	#format code
-	black  calculate_real_return/*.py
-lint:   #lint code
-	pylint --disable=R,C *.py etl/*.py
-test:
-	#test
-	#pytest mortalcalculator/test_mortality_calculate.py 
-clean:
-	#clean caches
-	rm -rf __pycache__ .pytest_cache
-build:
-	#build container
-	#docker build -t deploy-fastapi .
-run:
-	#run container
-	#docker run -p 127.0.01:8080:8080 cla36
-deploy:
-	#deploy
-all:install format lint test clean
-
-
-
-
 .PHONY: install format lint test clean build run deploy all help
 
 help:  ## Display this help message
