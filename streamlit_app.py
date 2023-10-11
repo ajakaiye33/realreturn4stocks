@@ -62,7 +62,12 @@ if st.button("Calculate"):
             f"The ideal minimum price per share to sell the stock for real profit is: ${min_price_per_share:.2f}"
         )
         st.success(
-            f"The ideal maximum price per share to consider for selling is: ${max_price_per_share:.2f}"
+            f"The suggested target maximum price per share to consider for selling is: ${max_price_per_share:.2f}"
+
         )
+
+        with st.expander("What does 'Suggested Target Maximum' mean?", expanded=False):
+            st.write("The 'Suggested Target Maximum' is calculated based on the inputs you've provided and current market conditions. It serves as a high-probability target for selling your shares. However, selling above this price could result in exceptionally high returns.")
+
     except Exception as e:
         st.error(f"An error occurred: {e}")
