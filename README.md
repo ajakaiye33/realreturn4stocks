@@ -2,7 +2,7 @@
 > Realize Your Investment Goals with Data-Driven Insights
 
 ![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/YOUR_USERNAME/YOUR_REPO_NAME/Python%20CI)
+[![Python CI using Makefile's all target](https://github.com/ajakaiye33/realreturn4stocks/actions/workflows/main.yaml/badge.svg)](https://github.com/ajakaiye33/realreturn4stocks/actions/workflows/main.yaml)
 
 ## About
 
@@ -20,22 +20,22 @@ The application operates under the assumption that you will hold the stock for a
 
 Clone this repository and navigate into the project directory. Run the following commands:
 
-\`\`\`bash
-git clone https://github.com/
+```bash
+git clone https://github.com/ajakaiye33/realreturn4stocks.git
 cd real_stock_calculator
 python -m venv venv
 source venv/bin/activate python
 make all
-\`\`\`
+```
 
 
 ## Usage
 
 To start the Streamlit app:
 
-\`\`\`bash
+```bash
 streamlit run streamlit_app.py
-\`\`\`
+```
 
 Navigate to `http://localhost:8501` in your web browser.
 
@@ -43,8 +43,8 @@ Navigate to `http://localhost:8501` in your web browser.
 
 Run all unit tests to ensure the application behaves as expected.
 
-\`\`\`bash
+```bash
 make test
-\`\`\`
+```
 
 
