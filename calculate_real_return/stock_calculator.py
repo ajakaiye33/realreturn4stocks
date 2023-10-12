@@ -37,7 +37,7 @@ class StockCalculator:
     def calculate_break_even(self):
         break_even_price = self.initial_price + self.fees_per_share
         st.write(
-            f"The break-even price per share, accounting for fees, is ${break_even_price:.2f}."
+            f"The break-even price per share,accounting for fees, is ${break_even_price:.2f}."
         )
         return break_even_price
 
