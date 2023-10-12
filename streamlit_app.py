@@ -38,9 +38,7 @@ with st.container():
         "Initial price per share ($)", min_value=0.0, max_value=100000.0, step=0.01
     )
     purchase_date = st.date_input("Purchase date")
-    target_rate = st.number_input(
-        "Target rate of return (%)", min_value=0.0, step=0.01
-    )
+    target_rate = st.number_input("Target rate of return (%)", min_value=0.0, step=0.01)
     current_cpi = st.number_input(
         "Current CPI or inflation rate (%)", min_value=0.0, max_value=100.0, step=0.01
     )
