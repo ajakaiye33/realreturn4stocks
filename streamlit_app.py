@@ -39,7 +39,7 @@ with st.container():
     )
     purchase_date = st.date_input("Purchase date")
     target_rate = st.number_input(
-        "Target rate of return (%)", min_value=0.0, max_value=100.0, step=0.01
+        "Target rate of return (%)", min_value=0.0, step=0.01
     )
     current_cpi = st.number_input(
         "Current CPI or inflation rate (%)", min_value=0.0, max_value=100.0, step=0.01
@@ -63,11 +63,12 @@ if st.button("Calculate"):
         )
         st.success(
             f"The suggested target maximum price per share to consider for selling is: ${max_price_per_share:.2f}"
-
         )
 
         with st.expander("What does 'Suggested Target Maximum' mean?", expanded=False):
-            st.write("The 'Suggested Target Maximum' is calculated based on the inputs you've provided and current market conditions. It serves as a high-probability target for selling your shares. However, selling above this price could result in exceptionally high returns.")
+            st.write(
+                "The 'Suggested Target Maximum' is calculated based on the inputs you've provided and current market conditions. It serves as a high-probability target for selling your shares. However, selling above this price could result in exceptionally high returns."
+            )
 
     except Exception as e:
         st.error(f"An error occurred: {e}")
