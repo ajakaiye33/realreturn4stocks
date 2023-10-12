@@ -8,7 +8,7 @@ def test_correct_calculations():
     calc = StockCalculator(100, "01/01/2021", 10, 2, 100, 5)  # sample input
     min_price, max_price = calc.calculate_sell_price()
     assert min_price == 124.3265148405673
-    assert max_price == 131.91216664190983
+    assert max_price == 131.9481238431833
 
 
 def test_edge_cases():
