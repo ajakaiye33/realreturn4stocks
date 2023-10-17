@@ -43,10 +43,10 @@ with st.container():
         "Current CPI or inflation rate (%)", min_value=0.0, max_value=100.0, step=0.01
     )
     num_shares = st.number_input(
-        "Number of shares bought", min_value=1, max_value=100000, step=1
+        "Number of shares bought", min_value=1, step=1
     )
     fees = st.number_input(
-        "Total fees/charges incurred ($)", min_value=0.0, max_value=10000.0, step=0.01
+        "Total fees/charges incurred ($)", min_value=0.0, step=0.01
     )
 
 if st.button("Calculate"):
