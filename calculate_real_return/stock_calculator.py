@@ -30,7 +30,7 @@ class StockCalculator:
     def calculate_real_rate(self):
         real_rate = ((1 + self.target_rate) / (1 + self.current_cpi)) - 1
         st.write(
-            f"Your target nominal rate of return is {self.target_rate * 100}%. Considering an inflation rate of {self.current_cpi * 100}%, your real rate of return is {real_rate * 100:.2f}%."
+            f"Your target nominal rate of return is {self.target_rate * 100}%. Considering an inflation rate of {self.current_cpi * 100:.2f}%, your real rate of return is {real_rate * 100:.2f}%."
         )  # Informing the user about the real rate
         return real_rate
 

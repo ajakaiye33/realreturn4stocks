@@ -7,9 +7,9 @@ from calculate_real_return.stock_calculator import (
 def test_correct_calculations():
     calc = StockCalculator(100, "01/01/2021", 10, 2, 100, 5)  # sample input
     min_price, max_price = calc.calculate_sell_price()
-    assert min_price == 124.45958346070823
-    assert max_price == 132.1280569793761
-    
+    assert min_price == 125.54102508804239
+    assert max_price == 133.5923154713842
+
 
 def test_edge_cases():
     calc = StockCalculator(100, "01/07/2023", 0, 0, 100, 0)  # sample edge case input

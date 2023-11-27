@@ -42,12 +42,8 @@ with st.container():
     current_cpi = st.number_input(
         "Current CPI or inflation rate (%)", min_value=0.0, max_value=100.0, step=0.01
     )
-    num_shares = st.number_input(
-        "Number of shares bought", min_value=1, step=1
-    )
-    fees = st.number_input(
-        "Total fees/charges incurred ($)", min_value=0.0, step=0.01
-    )
+    num_shares = st.number_input("Number of shares bought", min_value=1, step=1)
+    fees = st.number_input("Total fees/charges incurred ($)", min_value=0.0, step=0.01)
 
 if st.button("Calculate"):
     try:
@@ -57,10 +53,10 @@ if st.button("Calculate"):
         )
         min_price_per_share, max_price_per_share = calculator.calculate_sell_price()
         st.success(
-            f"The ideal minimum price per share to sell the stock for real profit is: ${min_price_per_share:.2f}"
+            f"The ideal minimum target price per share to sell the stock for real profit is: ${min_price_per_share:.2f}"
         )
         st.success(
-            f"The suggested target maximum price per share to consider for selling is: ${max_price_per_share:.2f}"
+            f"The suggested target price per share to consider for selling is: ${max_price_per_share:.2f}"
         )
 
         with st.expander("What does 'Suggested Target Maximum' mean?", expanded=False):
